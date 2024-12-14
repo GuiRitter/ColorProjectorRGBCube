@@ -1,11 +1,14 @@
 package io.github.guiritter.color_projector_r_g_b_cube;
 
+import static io.github.guiritter.color_projector_r_g_b_cube.ColorProjectorRGBCube.ARGB_R;
+import static io.github.guiritter.color_projector_r_g_b_cube.ColorProjectorRGBCube.ARGB_G;
+import static io.github.guiritter.color_projector_r_g_b_cube.ColorProjectorRGBCube.ARGB_B;
+import static io.github.guiritter.color_projector_r_g_b_cube.ColorProjectorRGBCube.MAX_COLOR_VALUE;
+import static io.github.guiritter.color_projector_r_g_b_cube.ColorProjectorRGBCube.STEP;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
-
-import static io.github.guiritter.color_projector_r_g_b_cube.ColorProjectorRGBCube.STEP;
-import static io.github.guiritter.color_projector_r_g_b_cube.ColorProjectorRGBCube.MAX_COLOR_VALUE;
 
 public class Color implements Comparable<Color> {
 
@@ -83,5 +86,11 @@ public class Color implements Comparable<Color> {
 		}
 
 		return list;
+	}
+
+	public void setPixel(int pixel[]) {
+		pixel[ARGB_R] = r;
+		pixel[ARGB_G] = g;
+		pixel[ARGB_B] = b;
 	}
 }
